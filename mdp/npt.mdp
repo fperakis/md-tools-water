@@ -27,6 +27,6 @@ ref-t                    = 300
 nhchainlength            = 1
 
 pcoupl                   = Parrinello-Rahman 
-tau_p                    = 2.0
+tau_p                    = 4.0
 compressibility          = 4.46e-5
 ref_p                    = 1.0 
