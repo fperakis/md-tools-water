@@ -9,3 +9,4 @@ do
   sh ../../scripts/pipeline.sh
   cd ..
 done
+squeue -lu fperakis
