@@ -5,16 +5,16 @@ ml GCC/8.3.0  CUDA/10.1.243  OpenMPI/3.1.4
 ml GROMACS/2019.4-PLUMED-2.5.4
 
 # copy topology file
-cp ../src/topol.top .
+cp ../../src/topol.top .
 
 # solvate a box
 gmx solvate -cs tip4p -o conf.gro -box 2.3 2.3 2.3 -p topol.top
 
 # prepare minimization
-gmx grompp -f ../mdp/min.mdp -o em.tpr -pp min -po min
+gmx grompp -f ../../mdp/min.mdp -o em.tpr -pp min -po min
 
 # run minimization
-sbatch ../batch/em.sh
+sbatch ../../batch/em.sh
 
 #gmx mdrun -deffnm min
 

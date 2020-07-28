@@ -23,7 +23,7 @@ DispCorr                 = EnerPres
 tcoupl                   = Nose-Hoover
 tc-grps                  = System
 tau-t                    = 2.0
-ref-t                    = 298.15
+ref-t                    = 300
 nhchainlength            = 1
 
 pcoupl                   = Parrinello-Rahman 
