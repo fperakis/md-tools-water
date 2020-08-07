@@ -8,17 +8,17 @@ ml GROMACS/2019.4-PLUMED-2.5.4
 cp ../../src/topol.top .
 
 # solvate a box
-gmx solvate -cs tip4p -o conf.gro -box 2.3 2.3 2.3 -p topol.top
+gmx solvate -cs tip4p -o box.gro -box 2.3 2.3 2.3 -p topol.top
 
 # prepare minimization
-gmx grompp -f ../../mdp/min.mdp -o em.tpr -pp min -po min
+gmx grompp -f ../../mdp/min.mdp -c box.gro -o em.tpr -p topol.top
 
 # run minimization
-sbatch ../../batch/em.sh
-
-#gmx mdrun -deffnm min
+#sbatch ../../batch/em.sh
+gmx mdrun -deffnm em
 
 # equilibration NVT
+gmx grompp -f mdp/nvt.mdp -o nvt -pp  -po eql -c min -t min
 #gmx grompp -f mdp/eql.mdp -o eql -pp eql -po eql -c min -t min
 #gmx mdrun -deffnm eql
 
