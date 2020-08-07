@@ -1,11 +1,11 @@
 
 integrator               = md        
-dt                       = 0.002     ; 2 fs
-nsteps                   = 500000    ; 1.0 ns
+dt                       = 0.002      ; 2 fs
+nsteps                   = 50 000 000 ; 100.0 ns
 
-nstenergy                = 200
-nstlog                   = 2000
-nstxout-compressed       = 10000
+nstenergy                = 500000     ; save energies every 1 ns
+nstlog                   = 500000     ; update log file every 100.0 ps
+nstxout-compressed       = 500000     ; save compressed coordinates every 1.0 ns
 
 continuation             = yes
 constraint-algorithm     = lincs
