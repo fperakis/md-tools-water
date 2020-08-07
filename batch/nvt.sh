@@ -3,8 +3,8 @@
 #SBATCH -A SNIC2020-5-289
 # Name of the job
 #SBATCH -J NVT
-#SBATCH -t 2:00:00
-#SBATCH -n 1
+#SBATCH -t 12:00:00
+#SBATCH -n 28
 
 # It is always best to do a ml purge before loading modules in a submit file
 ml purge > /dev/null 2>&1

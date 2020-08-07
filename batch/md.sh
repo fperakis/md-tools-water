@@ -5,6 +5,8 @@
 #SBATCH -J MD
 #SBATCH -t 12:00:00
 #SBATCH -n 32
+# Asking for 2 K80 GPU cards per node
+#SBATCH --gres=gpu:k80:2
 
 # It is always best to do a ml purge before loading modules in a submit file
 ml purge > /dev/null 2>&1
