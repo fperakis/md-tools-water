@@ -3,10 +3,8 @@
 #SBATCH -A SNIC2020-5-289
 # Name of the job
 #SBATCH -J NPT
-#SBATCH -t 12:00:00
-#SBATCH -n 32
-# Asking for 2 K80 GPU cards per node
-#SBATCH --gres=gpu:k80:2
+#SBATCH -t 3-12:00:00
+#SBATCH -n 28
 
 # It is always best to do a ml purge before loading modules in a submit file
 ml purge > /dev/null 2>&1
